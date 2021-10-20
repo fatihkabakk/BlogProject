@@ -1,43 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DataAccessLayer.Abstract;
-using DataAccessLayer.Concrete;
+﻿using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
+using System.Collections.Generic;
 
 namespace DataAccessLayer.Repositories
 {
     public class BlogRepository : IBlogDal
     {
-        private readonly Context _context = new();
-        public List<Blog> ListAllBlogs()
+        public void Delete(Blog entity)
         {
-            return _context.Blogs.ToList();
+            throw new System.NotImplementedException();
         }
 
-        public void AddBlog(Blog blog)
+        public List<Blog> GetAll()
         {
-            _context.Add(blog);
-            _context.SaveChanges();
-        }
-
-        public void DeleteBlog(Blog blog)
-        {
-            _context.Remove(blog);
-            _context.SaveChanges();
-        }
-
-        public void UpdateBlog(Blog blog)
-        {
-            _context.Update(blog);
-            _context.SaveChanges();
+            throw new System.NotImplementedException();
         }
 
         public Blog GetById(int id)
         {
-            return _context.Blogs.Find(id);
+            throw new System.NotImplementedException();
+        }
+
+        public void Insert(Blog entity)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Update(Blog entity)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

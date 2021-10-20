@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DataAccessLayer.Abstract;
+﻿using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
+using System;
+using System.Collections.Generic;
 
 namespace DataAccessLayer.Repositories
 {
@@ -31,6 +28,11 @@ namespace DataAccessLayer.Repositories
         }
 
         public void GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Comment IGenericDal<Comment>.GetById(int id)
         {
             throw new NotImplementedException();
         }
